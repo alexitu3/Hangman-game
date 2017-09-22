@@ -1,17 +1,7 @@
 
-
-var nameBlock = [];
-var lettersRemaing = 10;
-var guessedLetters = []; 
-var names = ["miller", "talib", "siemian", "thomas",
+var wordBank = ["miller", "talib", "siemian", "thomas",
 "anderson", "sanders", "wolfe", "taylor", "latimer", 
  "roby", "marshall", "harris", "ray"];
-
-var randoName = names[Math.floor(Math.random() * names.length)];
-var userText = document.getElementById("user-text");
-
-
-var wordBank = ["cat", "dog", "bird", "fish"];
 var wordPicker = wordBank[Math.floor(Math.random() * wordBank.length)];
 var dashes = [];
 var lettersGuessed = [];
@@ -24,12 +14,12 @@ var validationChecker = function(inputStr) {
     var isLetter = patt.test(inputStr); // check if input is a letter T/F
     return isLetter
 }
-// alert users 
+// alert users .... linked to html?
 function notLetter (str) {
     alert( str + "Is not a letter. lease type letters only! (a-z)");
 }
 
-// create dashes
+// creates dashes but still needs to link to html
 function displayDashes(str) {
     var wordCount = str.length;
     for(var i = 0; i< wordCount.length; i++){
@@ -37,6 +27,7 @@ function displayDashes(str) {
         console.log(dashes);
     }
 }
+
 // compare user input to selected word
 function keyCompare(str1, str2) {
     if(str1.indexOf(str2) !== -1) {
@@ -73,7 +64,7 @@ function displayRight(userInput, dashes, wordPicker) {
     }
 }
 
-
+// still need to add html linkage
 
 document.addEventListener("keyup", function(event){
     var userInput =  event.key.toLowerCase();// key press value
@@ -92,3 +83,5 @@ document.addEventListener("keyup", function(event){
                 notLetter(userInput);
             }
 });
+
+// need to add a reset function. 

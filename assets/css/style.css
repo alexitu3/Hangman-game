@@ -1,23 +1,23 @@
- .container {
-      text-align: center;
-    }
-    #game-wrapper {
-      border: 1px dotted #000;
-    }
-    #image-display{
-      border-right: 1px dotted #000;
-      border-bottom: none;
-    }
-    #banner h1 {
-      color: red;
-    }
-    @media only screen and (max-width: 991.98px) { 
-      #image-display{
-      border-right: none;
-      border-bottom: 1px dotted #000;
-    }
-    }
+h1 {
+  text-align: center;
 
-    img {
-      display: center;
-    }
+}
+
+/*add a ton more css */
+
+img {
+  margin: 0% 7%;
+  width: 40%;
+  height: 40%;
+  float: left;
+}
+
+
+.container {
+  height: 380px;
+  width: 400px;
+  background-color: gray;
+  float: right;
+  margin: 0% 3%;
+}
+
